@@ -6,9 +6,21 @@ class Item(models.Model):
 	category = models.CharField(max_length=60)
 	sub_category = models.CharField(max_length=60)
 	name = models.CharField(max_length=60)
-	year = models.IntegerField(default=0)
+	year = models.CharField(max_length=20)
 	country = models.CharField(max_length=60)
 	region = models.CharField(max_length=60)
+
+	def __str__(self):
+
+		return '  '.join([
+			self.distributor,
+			self.category,
+			self.sub_category,
+			self.name,
+			self.year,
+			self.country,
+			self.region,
+		])
 
 class ItemAdmin(admin.ModelAdmin):
     list_display = ["distributor", "category", "sub_category", "country", "region", "name", "year"]

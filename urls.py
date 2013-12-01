@@ -1,17 +1,11 @@
 from django.conf.urls.defaults import patterns, include, url
 
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'bootledger.views.home', name='home'),
-    # url(r'^bootledger/', include('bootledger.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
+    url(r'^bootledger/$', 'boot_ledger.views.index'),
+    # url(r'^bootledger/(?P<item_id>\d+)/$', 'boot_ledger.views.detail'),
+    # url(r'^bootledger/(?P<item_id>\d+)/results/$', 'boot_ledger.views.results'),
     url(r'^admin/', include(admin.site.urls)),
 )
