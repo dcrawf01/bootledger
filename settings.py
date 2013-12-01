@@ -107,6 +107,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'bootledger.urls'
 
 TEMPLATE_DIRS = (
+    "/home/rory/code/bootledger/mytemplates/",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -121,6 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'boot_ledger',
+    # 'bootstrap',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
