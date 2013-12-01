@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from boot_ledger.models import Item
 from django.views.generic import ListView
 
+class ListItemView(ListView):
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the poll index.")
+	model = Item
+	template_name = 'items_list.html'
